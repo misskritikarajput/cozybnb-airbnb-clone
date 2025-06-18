@@ -4,7 +4,7 @@
         <div class="col-8 offset-2">
         <br><br>
     <h1>Create New Listing</h1>
-    <form method="POST" action="/listings">
+    <form method="POST" action="/listings" novalidate class="needs-validation">
 
         <div class="mb-3">
             <label for="title" class="form-label">Title: </label>
@@ -12,12 +12,26 @@
                 type="text" 
                 name="title" 
                 placeholder="Add a catchy title" 
-                class="form-control">
+                class="form-control"
+                required
+        />
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please provide a valid title.
+        </div>
         </div>
       
         <div class="mb-3">
             <label for="description" class="form-label">description: </label>
-            <textarea name="description" class="form-control"></textarea>
+            <textarea name="description" class="form-control" required></textarea>
+            <div class="valid-feedback">
+                 Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a valid description.
+            </div>
         </div>
    
         <div class="mb-3">
@@ -38,7 +52,14 @@
                     type="text" 
                     name="price" 
                     placeholder="1200" 
-                    class="form-control">
+                    class="form-control"
+                    required>
+            <div class="valid-feedback">
+                 Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a valid price.
+            </div>
         </div>
             </div>
             <div class="col-md-8">
@@ -48,8 +69,15 @@
                 type="text" 
                 name="country" 
                 placeholder="India" 
-                class="form-control">
-        </div>
+                class="form-control"
+                required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid country.
+                </div>
+                </div>
             </div>
         </div>
 
@@ -60,7 +88,14 @@
                 type="text" 
                 name="location" 
                 placeholder="Jaipur, Rajasthan" 
-                class="form-control">
+                class="form-control"
+                required>
+            <div class="valid-feedback">
+                 Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a valid location.
+            </div>
         </div>
         
         
