@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname,"/public")));
 //home route
 app.get("/",(req,res)=>{
     console.log("home route is working");
-    res.send("home route is working");
+    res.redirect("/listings");
 })
 
 const validateListing = (req, res, next) => {
