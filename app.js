@@ -22,7 +22,10 @@ main()
     })
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/cozyBnB');
+   await mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
 }
 
 app.set("view engine", "ejs");
